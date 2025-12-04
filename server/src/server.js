@@ -21,9 +21,6 @@ const __dirname = path.resolve();
 const port = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.get("/", (req, res) => {
-    res.send("Welcome to the Home Page");
-})
 app.use("/api/auth", authRoutes)
 app.use("/api/messages", messageRoutes)
 
